@@ -13,7 +13,7 @@
             <div class="col-md-6">
                 <div class="pin-generator half-width">
                     <input id="generated-pin-value" class="form-control" type="text">
-                    <button onclick="pinGenerator()" class="generate-btn">Generate Pin</button>
+                    <button id="random-pin-generator" onclick="pinGenerator()" class="generate-btn">Generate Pin</button>
                 </div>
             </div>
             <div class="col-md-6">
@@ -22,28 +22,28 @@
                     <div class="numbers">
                         <div class="calc-body">
                             <div class="calc-button-row">
-                              <div class="number-buttons">7</div>
-                              <div class="number-buttons">8</div>
-                              <div class="number-buttons">9</div>
+                              <div class="number-buttons" value="7">7</div>
+                              <div class="number-buttons" value="8">8</div>
+                              <div class="number-buttons" value="9">9</div>
                             </div>
                             <div class="calc-button-row">
-                              <div class="number-buttons">4</div>
-                              <div class="number-buttons">5</div>
-                              <div class="number-buttons">6</div>
+                              <div class="number-buttons" value="4">4</div>
+                              <div class="number-buttons" value="5">5</div>
+                              <div class="number-buttons" value="6">6</div>
                             </div>
                             <div class="calc-button-row">
-                              <div class="number-buttons">1</div>
-                              <div class="number-buttons">2</div>
-                              <div class="number-buttons">3</div>
+                              <div class="number-buttons" value="1">1</div>
+                              <div class="number-buttons" value="2">2</div>
+                              <div class="number-buttons" value="3">3</div>
                             </div>
                             <div class="calc-button-row">
-                                <div class="operator"><</div>
-                                <div class="number-buttons">0</div>
-                                <div class="operator">C</div>
+                                <div onclick="backspaceButton()" class="operator"><</div>
+                                <div class="number-buttons" value="0">0</div>
+                                <div onclick="clearField()" class="operator">C</div>
                             </div>
                             <div>
-                                <button onclick="pinMatch(2000)" type="submit" class="submit-btn">Submit</button>
-                                <p class="action-left">3 try left</p>
+                                <button id="submit-button" onclick="pinMatch()" type="submit" class="submit-btn">Submit</button>
+                                <p class="action-left"><span id=trial-left>3</span> trials left</p>
                             </div>
                     </div>
                 </div>
@@ -55,5 +55,6 @@
         </div>
     </div>
     <script src="app.js"></script>
+
 </body>
 </html>
