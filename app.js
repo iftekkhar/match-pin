@@ -38,9 +38,6 @@ function backspaceButton() {
 // Pin Matcher
 function pinMatch() {
   //Pin Compare
-    if () {
-        
-    }
   const pin = document.getElementById("generated-pin-value").value;
   const inputValue = document.getElementById("typed-input-value").value;
 
