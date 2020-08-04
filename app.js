@@ -38,11 +38,14 @@ function backspaceButton() {
 // Pin Matcher
 function pinMatch() {
   //Pin Compare
+    if () {
+        
+    }
   const pin = document.getElementById("generated-pin-value").value;
   const inputValue = document.getElementById("typed-input-value").value;
 
   //Success/Fail Notification
-  if (inputValue == pin) {
+  if (inputValue == pin && inputValue != "") {
     document.getElementById("success").style.display = "block";
     setTimeout(function () {
       document.getElementById("success").style.display = "none";
